@@ -1,0 +1,15 @@
+.SmurfForm {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgb(58, 101, 241);
+    border-radius: 10px;
+}
+
+input {
+    width: 100px;
+    margin-left: 20px;
+}
+
+button {
+    margin-left: 20px;
+}

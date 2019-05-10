@@ -1,0 +1,11 @@
+.Smurfs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    padding-top: 10px;
+}
