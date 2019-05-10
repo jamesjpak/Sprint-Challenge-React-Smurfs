@@ -1,5 +1,14 @@
 .App {
+  margin-top: 55px;
   text-align: center;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+.background {
+  background-color: rgb(126, 163, 233)
 }
 
 .nav-bar {

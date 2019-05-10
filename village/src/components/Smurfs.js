@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 
 import Smurf from './Smurf';
 
+import './Smurfs.css';
+
+
+
 class Smurfs extends Component {
 constructor(props) {
   super(props);
@@ -14,8 +18,11 @@ constructor(props) {
   render() {
     
     return (
-      <div className="Smurfs">
-        <h1>Smurf Village</h1>
+      <div className="Smurfs" >
+
+      <img src={require("../img/smurfvillage.png")} />
+
+      <div>
         <ul>
           {this.props.smurfs.map(smurf => (
               <Smurf
@@ -29,6 +36,7 @@ constructor(props) {
           ))}
 
         </ul>
+      </div>
       </div>
     );
   }
