@@ -5,6 +5,7 @@ import SmurfForm from "./components/SmurfForm";
 import Smurfs from "./components/Smurfs";
 
 import axios from "axios";
+import { throws } from "assert";
 
 class App extends Component {
   constructor(props) {
@@ -40,7 +41,7 @@ addSmurf = newSmurf => {
 
     return (
       <div className="App">
-        <SmurfForm />
+        <SmurfForm smurfs={this.state.smurfs} addSmurf={this.addSmurf} />
         <Smurfs smurfs={this.state.smurfs} />
       </div>
     );
