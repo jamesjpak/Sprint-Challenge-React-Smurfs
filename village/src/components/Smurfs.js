@@ -3,7 +3,17 @@ import React, { Component } from 'react';
 import Smurf from './Smurf';
 
 class Smurfs extends Component {
+constructor(props) {
+  super(props);
+  this.state = {
+    smurfs: props.smurfs
+  }
+}
+
   render() {
+
+console.log(this.state.smurfs)
+
     return (
       <div className="Smurfs">
         <h1>Smurf Village</h1>
