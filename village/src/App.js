@@ -5,13 +5,13 @@ import SmurfForm from "./components/SmurfForm";
 import Smurfs from "./components/Smurfs";
 
 import axios from "axios";
-import { throws } from "assert";
+
 
 import { Route, NavLink } from 'react-router-dom';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       smurfs: []
     };
@@ -31,6 +31,7 @@ addSmurf = newSmurf => {
   axios
   .post('http://localhost:3333/smurfs', newSmurf)
   .then(res => {
+    console.log(res)
     this.setState({smurfs: res.data})
   })
   .catch(err => {
@@ -39,18 +40,17 @@ addSmurf = newSmurf => {
 }
 
   render() {
-    console.log(this.state.smurfs);
-
+    
     return (
       <div className="App">
 
-      <nav>
-      <NavLink to='/'> Home </NavLink>
-      <NavLink to='/smurf-form'> Add a Smurf! </NavLink>
+      <nav className="nav-bar">
+      <NavLink to='/'> <div className='nav-link-style'> Home </div> </NavLink>
+      <NavLink to='/smurf-form'> <div className='nav-link-style'>Add a Smurf! </div> </NavLink>
       </nav>
 
         <Route 
-        exact path="/"
+        path="/"
         render={props => ( <Smurfs smurfs={this.state.smurfs} {...props} /> )} 
         />
 
